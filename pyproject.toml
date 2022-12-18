@@ -19,6 +19,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
+addopts = "--alluredir allure-results --clean-alluredir"
 filterwarnings = [
     "error",
     "ignore::UserWarning",

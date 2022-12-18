@@ -1,6 +1,5 @@
 from voluptuous import Schema, PREVENT_EXTRA
 
-from api.reqres import post_register_user
 
 create_user_schema = Schema({
         "name": str,
