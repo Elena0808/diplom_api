@@ -1,5 +1,6 @@
 import os
 import allure
+from allure_commons.types import Severity
 from dotenv import load_dotenv
 import schemas.schemas_reqres
 from api.reqres import get_list_users, post_create_users, update_user, \
@@ -10,6 +11,7 @@ from models.data_reqres import base_url
 
 
 @allure.tag('api')
+@allure.severity(Severity.BLOCKER)
 @allure.label('owner', 'Elena0808')
 @allure.description('Список пользователей')
 @allure.feature('Проверка метода на возвращение списка пользователей')
@@ -24,6 +26,7 @@ def test_list_users():
 
 
 @allure.tag('api')
+@allure.severity(Severity.BLOCKER)
 @allure.label('owner', 'Elena0808')
 @allure.description('Создание пользователя')
 @allure.feature('Проверка создания пользователя при вводе валидных данных')
@@ -40,6 +43,7 @@ def test_create_user(name=data_reqres.create_name, job=data_reqres.create_job):
 
 
 @allure.tag('api')
+@allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'Elena0808')
 @allure.description('Список пользователей')
 @allure.feature(f'Проверка возвращения в ответе пользователя по заданному id {data_reqres.id_user}')
@@ -58,6 +62,7 @@ def test_get_user(id_user=data_reqres.id_user):
 
 
 @allure.tag('api')
+@allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'Elena0808')
 @allure.description('Обновление пользователей')
 @allure.feature('Проверка обновления id, name, job пользователя')
@@ -75,6 +80,7 @@ def test_update_user(id_user=data_reqres.id_user_update, name=data_reqres.name_u
 
 
 @allure.tag('api')
+@allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'Elena0808')
 @allure.description('Удаление пользователей')
 @allure.feature('Проверка удаления пользователя')
@@ -87,6 +93,7 @@ def test_delete_user(id_user=data_reqres.user_id_delete):
 
 
 @allure.tag('api')
+@allure.severity(Severity.BLOCKER)
 @allure.label('owner', 'Elena0808')
 @allure.description('Авторизация пользователя')
 @allure.feature('Проверка авторизации пользователя с введенными валидными данными')
@@ -102,6 +109,7 @@ def test_login_user():
 
 
 @allure.tag('api')
+@allure.severity(Severity.CRITICAL)
 @allure.label('owner', 'Elena0808')
 @allure.description('Авторизация пользователя')
 @allure.feature('Проверка ошибки авторизации пользователя без передачи пароля в теле запроса')
