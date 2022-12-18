@@ -29,3 +29,9 @@
 <code><img width="6%" title="Jenkins" src="logo/jenkins.svg"></code>
 <code><img width="6%" title="Allure" src="logo/allure.svg"></code>
 </p>
+
+## Сборка в Jenkins
+[Cсылка на проект в Jenkins](https://jenkins.autotests.cloud/job/C02-les0808-22-api/)
+
+## Allure report
+[Ссылка на отчет](https://jenkins.autotests.cloud/job/C02-les0808-22-api/8/allure/)
