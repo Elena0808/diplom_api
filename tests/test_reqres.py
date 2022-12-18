@@ -17,7 +17,7 @@ from models.data_reqres import base_url
 def test_list_users():
     with allure.step(f'Делаю GET запрос c параметром page={data_reqres.page}'):
         response = get_list_users(params={"page": data_reqres.page})
-    with allure.step('Проверка статус кода и открытой страницы'):
+    with allure.step('Проверка статус-кода и списка пользователей'):
         assert response.status_code == 200
         assert response.json()['page'] == data_reqres.page
         assert len(response.json()['data']) != 0
@@ -82,7 +82,7 @@ def test_update_user(id_user=data_reqres.id_user_update, name=data_reqres.name_u
 def test_delete_user(id_user=data_reqres.user_id_delete):
     with allure.step(f'Отправка запроса DELETE с id {data_reqres.user_id_delete}'):
         response = delete_user(id_user)
-    with allure.step('Проверка соответствия статус коду'):
+    with allure.step('Проверка соответствия статус-коду'):
         assert response.status_code == 204
 
 
@@ -95,7 +95,7 @@ def test_login_user():
     load_dotenv()
     with allure.step('Отправка POST запроса с веденными валидными данными'):
         response = post_login_user(email=os.getenv('email'), password=os.getenv('password'))
-    with allure.step('Проверка соответствия статус коду'):
+    with allure.step('Проверка соответствия статус-коду'):
         assert response.status_code == 200
     with allure.step('Проверка соответствия ответа схеме'):
         assert response.json() == S(schemas.schemas_reqres.post_login_user)
@@ -109,7 +109,7 @@ def test_login_user():
 def test_fail_register_user():
     with allure.step('POST запрос без обязательного параметра password'):
         response = post_register_user(email='test@test123.test')
-    with allure.step('Проверка ответа статус-кода и ошибки'):
+    with allure.step('Проверка статус-кода и ошибки в ответе'):
         assert response.status_code == 400
         assert response.json()['error'] == 'Missing password'
     with allure.step('Проверка соответствия ответа схеме'):
