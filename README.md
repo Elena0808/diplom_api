@@ -34,4 +34,4 @@
 [Cсылка на проект в Jenkins](https://jenkins.autotests.cloud/job/C02-les0808-22-api/)
 
 ## Allure report
-[Ссылка на отчет](https://jenkins.autotests.cloud/job/C02-les0808-22-api/8/allure/)
+[Ссылка на отчет](https://jenkins.autotests.cloud/job/C02-les0808-22-api/9/allure)
