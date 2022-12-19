@@ -6,9 +6,8 @@
 ## Содержание:
 - [Реализованные проверки по тест-кейсам](https://github.com/Elena0808/diplom_ui#%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B8-%D0%BF%D0%BE-%D1%82%D0%B5%D1%81%D1%82-%D0%BA%D0%B5%D0%B9%D1%81%D0%B0%D0%BC)
 - [Используемый стек](https://github.com/Elena0808/diplom_ui#%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D0%BC%D1%8B%D0%B9-%D1%81%D1%82%D0%B5%D0%BA)
-- [Сборка в Jenkins]()
-- [Allure report]()
-- [Пример прохождения тестов]()
+- [Сборка в Jenkins](https://github.com/Elena0808/diplom_api#%D1%81%D0%B1%D0%BE%D1%80%D0%BA%D0%B0-%D0%B2-jenkins)
+- [Allure report](https://github.com/Elena0808/diplom_api#allure-report)
 ## Реализованные проверки по тест-кейсам  
 ✓ Запрос списка пользователей  
 ✓ Создание пользователя при вводе валидных данных  
@@ -35,3 +34,12 @@
 
 ## Allure report
 [Ссылка на отчет](https://jenkins.autotests.cloud/job/C02-les0808-22-api/9/allure)
+
+<p align="left">
+  <img width="90%" src="logo/screenAllure.png"/>
+</p>
+
+Пример получаемого оповещения:
+<p align="left">
+  <img width="90%" src="logo/results_notification.png"/>
+</p>
